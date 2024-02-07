@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# if there is npm - install tree-sitter-cli with npm
+# else if there is cargo - install tree-sitter-cli with cargo
+# else - exit with error
+
+if command -v npm &>/dev/null; then
+    npm install -g tree-sitter-cli
+elif command -v cargo &>/dev/null; then
+    cargo install tree-sitter-cli
+else
+    echo "No package manager found"
+    exit 1
+fi
+
+rm -rf ~/.config/nvim
+ln -s $(pwd) ~/.config/nvim
+rm -rf ~/.config/tmux
+rm -rf ~/.tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+ln -s $(pwd)/tmux ~/.config/tmux
