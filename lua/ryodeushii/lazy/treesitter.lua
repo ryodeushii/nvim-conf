@@ -5,8 +5,8 @@ return {
         require("nvim-treesitter.configs").setup({
             -- A list of parser names, or "all"
             ensure_installed = {
-                "vimdoc", "javascript", "typescript", "lua", "rust","go",
-                "jsdoc", "bash",
+                "vimdoc", "javascript", "typescript", "lua", "rust", "go",
+                "jsdoc", "bash", "markdown", "markdown_inline"
             },
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -36,11 +36,26 @@ return {
         treesitter_parser_config.templ = {
             install_info = {
                 url = "https://github.com/vrischmann/tree-sitter-templ.git",
-                files = {"src/parser.c", "src/scanner.c"},
+                files = { "src/parser.c", "src/scanner.c" },
                 branch = "master",
             },
         }
 
+        vim.filetype.add({
+            extension = { mdx = 'mdx' }
+        })
+        local autocmd = vim.api.nvim_create_autocmd
+        autocmd({
+            "BufNewFile", "BufRead",
+        }, {
+            pattern = { "*.mdx" },
+            callback = function()
+                local buf = vim.api.nvim_get_current_buf()
+                vim.api.nvim_buf_set_option(buf, "filetype", "markdown")
+            end,
+        })
+
+        vim.treesitter.language.register('mdx', 'markdown')
         vim.treesitter.language.register("templ", "templ")
     end
 }
