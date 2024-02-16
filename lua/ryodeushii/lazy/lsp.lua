@@ -37,7 +37,6 @@ return {
             },
             handlers = {
                 function(server_name) -- default handler (optional)
-
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
                     }
@@ -45,6 +44,7 @@ return {
 
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
+
                     lspconfig.lua_ls.setup {
                         capabilities = capabilities,
                         settings = {
@@ -92,5 +92,6 @@ return {
                 prefix = "",
             },
         })
+
     end
 }

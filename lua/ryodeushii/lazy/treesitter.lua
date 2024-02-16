@@ -41,9 +41,6 @@ return {
             },
         }
 
-        vim.filetype.add({
-            extension = { mdx = 'mdx' }
-        })
         local autocmd = vim.api.nvim_create_autocmd
         autocmd({
             "BufNewFile", "BufRead",
@@ -55,7 +52,6 @@ return {
             end,
         })
 
-        vim.treesitter.language.register('mdx', 'markdown')
         vim.treesitter.language.register("templ", "templ")
     end
 }
