@@ -19,3 +19,12 @@ rm -rf ~/.config/tmux
 rm -rf ~/.tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s $(pwd)/tmux ~/.config/tmux
+
+
+rm -rf ~/.bash_config
+ln -s $(pwd)/bash_config.sh ~/.bash_config
+
+rm -rf ~/.bash_aliases
+ln -s $(pwd)/bash_aliases.sh ~/.bash_aliases
+rm  -rf ~/.bash_vars
+ln -s $(pwd)/bash_vars.sh ~/.bash_vars
