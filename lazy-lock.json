@@ -30,6 +30,9 @@
   "neotest-rust": { "branch": "main", "commit": "9e9df68064bd6fa3b5e40b32fcb7c52af130cdbf" },
   "neotest-vitest": { "branch": "main", "commit": "ae774282a592b872e84ffdcc5b4d11fc991eca7b" },
   "nvim-cmp": { "branch": "main", "commit": "04e0ca376d6abdbfc8b52180f8ea236cbfddf782" },
+  "nvim-dap": { "branch": "master", "commit": "fc880e82059eb21c0fa896be60146e5f17680648" },
+  "nvim-dap-ui": { "branch": "master", "commit": "9720eb5fa2f41988e8770f973cd11b76dd568a5d" },
+  "nvim-dap-virtual-text": { "branch": "master", "commit": "baa5b0dc6663284cce32e0d00ac1f2511b13496f" },
   "nvim-lspconfig": { "branch": "master", "commit": "4bdd3800b4148f670c6cf55ef65f490148eeb550" },
   "nvim-surround": { "branch": "main", "commit": "84a26afce16cffa7e3322cfa80a42cddf60616eb" },
   "nvim-treesitter": { "branch": "master", "commit": "8d3176cfbc0e3c5b8eadf4dfc20681878529c3af" },
@@ -48,5 +51,6 @@
   "vim-apm": { "branch": "master", "commit": "96d452bb97c7b147b87edf75b53d5d724fb4bf64" },
   "vim-easymotion": { "branch": "master", "commit": "b3cfab2a6302b3b39f53d9fd2cd997e1127d7878" },
   "vim-fugitive": { "branch": "master", "commit": "41beedabc7e948c787ea5696e04c3544c3674e23" },
+  "vscode-node-debug2": { "branch": "main", "commit": "20ee19f33af9b54b92cf50ce478c07da3a5188b3" },
   "zen-mode.nvim": { "branch": "main", "commit": "78557d972b4bfbb7488e17b5703d25164ae64e6a" }
 }
