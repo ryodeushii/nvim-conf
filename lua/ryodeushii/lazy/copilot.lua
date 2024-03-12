@@ -26,6 +26,7 @@ return {
                 vim = true,
                 sh = true,
                 bash = true,
+                groovy = true,
                 ["*"] = false,
             }
         })
